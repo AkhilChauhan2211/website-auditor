@@ -63,6 +63,19 @@ A full-stack web application built with React and Spring Boot that analyzes webs
 
 ---
 
+## Design Decisions
+
+### Separate Frontend and Backend
+I chose to keep the React frontend and Spring Boot backend as separate applications. This makes each layer easier to maintain, test, and deploy independently.
+
+### Automatic URL Normalization
+Users can enter `google.com` instead of requiring `https://google.com`. The backend automatically adds the protocol, making the application more user-friendly.
+
+### Jsoup for HTML Parsing
+Jsoup provides a simple and reliable way to fetch and parse HTML documents, allowing the application to efficiently extract titles, meta descriptions, headings, images, and text content.
+
+---
+
 ## 📂 Project Structure
 
 ```
