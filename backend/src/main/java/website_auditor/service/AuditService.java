@@ -20,7 +20,7 @@ public class AuditService {
 
         URI uri;
 
-        if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        if (!url.matches("^[a-zA-Z][a-zA-Z0-9+.-]*://.*")) {
             url = "https://" + url;
         }
 
