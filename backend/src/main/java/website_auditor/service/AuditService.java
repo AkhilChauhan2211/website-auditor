@@ -20,6 +20,10 @@ public class AuditService {
 
         URI uri;
 
+        if (!url.startsWith("http://") && !url.startsWith("https://")) {
+            url = "https://" + url;
+        }
+
         try {
             uri = URI.create(url);
         } catch (IllegalArgumentException e) {
